@@ -23,7 +23,7 @@ def round_robin(burst_time, quantum):
         if done:
             break
 
-    for i in range(4):
+    for i in range(len(process_order)):
         cnt.led2(process_order[i])
         time.sleep(1.5)
     return waiting_time, process_order
