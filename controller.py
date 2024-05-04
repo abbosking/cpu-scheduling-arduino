@@ -78,15 +78,3 @@ def led2(total):
         led_3.write(0)
         led_4.write(1)
         led_5.write(0)
-    elif total==4:
-        led_1.write(1)
-        led_2.write(1)
-        led_3.write(1)
-        led_4.write(1)
-        led_5.write(0)
-    elif total==5:
-        led_1.write(1)
-        led_2.write(1)
-        led_3.write(1)
-        led_4.write(1)
-        led_5.write(1)
