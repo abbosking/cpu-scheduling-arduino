@@ -3,6 +3,7 @@ from pyfirmata import Arduino, SERVO, util
 from time import sleep
 from rr import round_robin
 from fff import fcfs_scheduling
+from sjf import shortest_job_first
 
 
 def change(numbersid):
@@ -21,9 +22,12 @@ def change(numbersid):
                         print(round_robin(numbersid,2))
                     else:
                         print("now")
-                if command in("fcfs","first come first serve"):
-                    print("Sending numbers list to change function (length exceeds 4).5454")
+                elif command in("fcfs","first come first serve"):
+                    print("Sending numbers list to change function (length exceeds 4) to fcfs")
                     print(fcfs_scheduling(numbersid))
+                elif command in("sjf","shortest job first"):
+                    print("Sending numbers list to change function (length exceeds 4) to sjf")
+                    print(shortest_job_first(numbersid))
 
                 else:
                     print("blabla")
