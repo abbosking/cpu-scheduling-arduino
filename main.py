@@ -92,12 +92,13 @@ with mp_hand.Hands(min_detection_confidence=0.5,
         k=cv2.waitKey(1)
         if k==ord('q'):
             break
-        elif k==ord('f'):
+        elif k==ord('s'):
             if(len(numbersid)<4):
                 numbersid.append(total)
                 print(f"Stored number {total}")
             elif (len(numbersid)==4):
                 video.release()
+                cv2.destroyAllWindows()
                 change(numbersid)
 video.release()
 cv2.destroyAllWindows()
